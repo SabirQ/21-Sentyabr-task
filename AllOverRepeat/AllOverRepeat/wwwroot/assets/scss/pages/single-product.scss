@@ -1,0 +1,391 @@
+@import "../utilities/colors.scss";
+@import "../utilities/mixins.scss";
+
+.single-product{
+    @include pagesPadding;
+    &__container{
+        @include container;
+        &__row{
+            @include rowResponse;
+            &__column{
+                padding: 0 15px;
+                &__zoom{
+                    width: 100%;
+                    &__focus{ border: 1px solid #e2e0e09b;
+                        &__image{
+                            
+                            cursor: pointer;
+                            &__img{
+                               width: 100%;
+                                z-index:2;
+                                opacity: 1;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                    &__nav{
+                        .slick-list{
+                            padding: 0 !important;
+                            margin: 20px -5px;
+                        }
+                        &__image{
+                            border: 1px solid #e2e0e09b;
+                            margin: 0 5px;
+                            cursor: pointer;
+                            &__img{
+                                width: 100%;
+                                position: relative;
+                                left: 0px;
+                                top: 0px;
+                                z-index: 2;
+                                opacity: 1;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+                &__info{
+                    &__text{
+                        &__title{
+                            @include Monserrat($listTitleColor,24px);
+                            margin-bottom:10px;
+                            font-weight: 500;
+                        }
+                        &__review{
+                            color: $main;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
+                        &__prices{
+                            @include Monserrat($listTitleColor,18px);
+                            font-weight: 500;
+                            margin-top: 10px;
+                        }
+                        &__article{
+                            padding-top: 15px;
+                            padding-bottom: 20px;
+                            margin: 0;
+                        }
+                    }
+                    &__values{
+                        margin-bottom: 30px;
+                        &__count{
+                            display: flex;
+                            margin-bottom: 20px;
+                            .plus-minus{
+                                margin-right: 15px;
+                            }
+                        }
+                        &__available{
+                            margin-bottom: 20px;
+                            &__title{
+                                @include Monserrat($listTitleColor,14px);
+                               display: inline;
+                               font-weight: 600;
+                            }
+                            &__stock{
+                                margin-left: 10px;
+                                font-size: 14px;
+                                color: #22DD77;
+                            }
+                        }
+                    }
+                    &__social-button{
+                        &__title{
+                            @include Monserrat($listTitleColor,14px);
+                            display: inline;
+                            font-weight: 600;
+                            margin-right: 10px;
+                        }
+                        &__btn{
+                            width: 36px;
+                            height: 36px;
+                            margin-right: 6px;
+                            @include transition(0.3s);
+                            background-color: white;
+                            border: 1px solid $bottomBorder;
+                            &:hover{
+                                background-color: $main;
+                                border-color: $main;
+                                a{
+                                    color: white;
+                                    @include transition(0.3s);
+                                }
+                            }
+                            &__link{
+                                
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__info-row{
+            padding-top: 62px;
+            @media (min-width:768px){
+              padding-top: 80px;
+            }
+            @include rowResponse;
+            &__column{
+                &__buttons{
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &__button{
+                        border: 1px solid #ededed;
+                        font-size: 15px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: white;
+                        padding: 5px 9px;
+                        margin: 0;
+                        background-color:  #979898;
+                        @include transition(0.3s);
+                        cursor: pointer;
+                        border-bottom: none;
+                        &:hover{
+                            background-color: white;
+                            color: $textColor;
+                        }
+                    }
+                }
+                &__container{
+                    width: 100%;
+                    border: 1px solid #ededed;
+                    background-color: white;
+                    &__desk{
+                        padding: 15px 20px 20px;
+                        height: fit-content;
+                        &__description{
+                            display: none;
+                            opacity: 0;
+                            @include transition(0.3s);
+                            &__image-list{
+                                width: 100%;
+                                display: flex;
+                                padding: 25px 0px;
+                                flex-wrap: wrap;
+                                &__image{
+                                    position: relative;
+                                    @media (max-width: 767px)
+                                    {
+                                       width: 100%;
+                                   }
+                                   @media (min-width: 767px)
+                                    {
+                                       width: 40%;
+                                   }
+                                   
+                                   @media (min-width: 992px)
+                                    {
+                                       width: 30%;
+                                   }
+                                    &__img{
+                                        width: 100%;
+                                        object-fit: cover;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                &__list{ 
+                                   
+                                    padding-left: 40px;
+                                    list-style: disc !important;
+                                    h3{
+                                        @include Monserrat($main,20px);
+                                        padding-bottom: 10px;
+                                    }
+                                    &__item{
+                                       
+                                       margin: 5px 0 ;
+                                        span{
+        
+                                        }
+                                    }
+                                }
+                            }
+                            &__bottom-article{
+    
+                            }
+                        }
+                        &__info{
+                            display: none;
+                            opacity: 0;
+                            @include transition(0.3s);
+                            &__table{
+                                width: 100%;
+                                &__content{
+                                    &__row{
+                                        width: 100%;
+                                       
+                                        &__data{
+                                            border: 1px solid #dee2e6;
+                                            padding: 15px;
+                                           
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &__reviews{
+                            display: none;
+                            opacity: 0;
+                            @include transition(0.3s);
+                            &__title{
+                                padding-bottom: 20px;
+                                @include Monserrat($listTitleColor,20px);
+                                font-weight: 500;
+                                margin: 0;
+                                span{
+                                    color: $main;
+                                }
+                            }
+                            &__comment{
+                                display: flex;
+                                margin-bottom: 50px;
+                                &__text{
+                                    p:last-child{
+                                        margin: 10px 0 0 0;
+
+                                    }
+                                    border: 1px solid $bottomBorder;
+                                    padding: 10px;
+                                    margin-left: 10px;
+                                    font-size: 13px;
+                                    font-style: italic;
+                                    span{
+                                        
+                                        font-size: 12px;
+                                        padding-bottom: 10px;
+                                        
+                                       
+                                    }
+                                    &__star{
+                                        margin: 0;
+                                        padding-bottom: 5px;
+                                        color: $main;
+                                    }
+                                }
+                            }
+                            &__form{
+                                span{
+                                    color: red;
+                                   margin-right: 3px;
+                                }
+                                label{
+                                    padding-top: 15px;
+                                   margin: 7px 0;
+                                }
+                                &__submit{
+                                    background-color: transparent;
+                                    border: none;
+                                    margin-top: 10px;
+                                }
+                                &__item{
+                                    display: block;
+                                    width: 100%;
+                                    padding: 6px 12px;
+                                    font-size: 1rem;
+                                    line-height: 1.5;
+                                    color: #495057;
+                                    background-color: #fff;
+                                    background-clip: padding-box;
+                                    border: 1px solid #ced4da;
+                                    border-radius: 0.25rem;
+                                    
+                                    &:last-child{
+                                        padding: 20px 10px !important;
+                                    }
+                                }
+                                &__quality{
+                                    input{
+                                        display: initial;
+                                        margin: 5px;
+                                    }
+                                    span:nth-child(2){
+                                        color: $textColor;
+                                        margin-right: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+._active-info-btn{
+    background-color: white;
+    color: $textColor;
+}
+
+._active-info-item{
+    display: block;
+    opacity: 1;
+}
+
+.plus-minus{
+    display: inline;
+    height: 46px;
+    width: 90px;
+    display: flex;
+    background-color: white;
+    border: 1px solid $bottomBorder;
+    
+    &__minus{
+        width: 33.333%;
+        height: 100%;
+        color: $textColor;
+        background-color: transparent;
+        padding-left: 5px;
+        font-size: 22px;
+    }
+    &__plus{
+        font-size: 22px;
+        padding-right: 5px;
+        width: 33.333%;
+        height: 100%;
+        color: $textColor;
+        background-color: transparent;
+    }
+
+    &__value{
+        background-color: transparent;
+        color: $textColor;
+        width: 33.333%;
+        height: 100%;
+        display: inline;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        outline: none;
+    }
+}
+
+.custom-button{
+    padding: 10px 27px;
+    font-size: 16px;
+    background-color: $listTitleColor;
+    @include transition;
+    &:hover{
+      background-color: $main;
+      a{
+        color: white;
+      }
+    }
+    &__link{
+        text-transform: uppercase;
+        color: $main;
+        font-weight: 400;
+    }
+}
+
+._active-info-button{
+    background-color: white;
+    color: $textColor;
+}

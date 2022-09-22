@@ -1,0 +1,163 @@
+.page-titles {
+  background-color: rgba(245, 245, 245, 0.616); }
+  .page-titles__container {
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 0; }
+    @media (min-width: 576px) {
+      .page-titles__container {
+        min-width: 540px; } }
+    @media (min-width: 768px) {
+      .page-titles__container {
+        min-width: 720px; } }
+    @media (min-width: 992px) {
+      .page-titles__container {
+        padding: 0 12px;
+        min-width: 960px; } }
+    @media (min-width: 1200px) {
+      .page-titles__container {
+        max-width: 1200px; } }
+    .page-titles__container__row {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%; }
+      .page-titles__container__row__column {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-top: 28px;
+        padding-bottom: 35px;
+        text-align: center; }
+        @media (min-width: 768px) {
+          .page-titles__container__row__column {
+            padding-top: 52px;
+            padding-bottom: 57px; } }
+        .page-titles__container__row__column h1 {
+          padding-bottom: 1px;
+          text-transform: uppercase;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 24px;
+          color: #333333;
+          font-weight: 600; }
+        .page-titles__container__row__column__link {
+          padding: 0 2px;
+          font-size: 16px;
+          color: #333333; }
+        .page-titles__container__row__column span {
+          color: #e3a51e;
+          padding: 0 2px; }
+        .page-titles__container__row__column__slash {
+          font-size: 16px;
+          color: #333333 !important; }
+
+.contact-us-contact {
+  padding: 62px 0 62px 0; }
+  @media (min-width: 768px) {
+    .contact-us-contact {
+      padding: 80px 0 80px 0; } }
+  .contact-us-contact__container {
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 0; }
+    @media (min-width: 576px) {
+      .contact-us-contact__container {
+        min-width: 540px; } }
+    @media (min-width: 768px) {
+      .contact-us-contact__container {
+        min-width: 720px; } }
+    @media (min-width: 992px) {
+      .contact-us-contact__container {
+        padding: 0 12px;
+        min-width: 960px; } }
+    @media (min-width: 1200px) {
+      .contact-us-contact__container {
+        max-width: 1200px; } }
+    .contact-us-contact__container__row {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%; }
+      .contact-us-contact__container__row__column__title {
+        text-transform: capitalize;
+        padding-bottom: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        color: #333333;
+        font-weight: 600; }
+      .contact-us-contact__container__row__column__form__row__column input {
+        margin-bottom: 30px;
+        width: 100%;
+        border: none;
+        padding: 10px 10px 13px 10px;
+        background-color: #f3f6f5;
+        outline: none; }
+        .contact-us-contact__container__row__column__form__row__column input::-webkit-input-placeholder {
+          font-style: italic;
+          font-size: 13px;
+          color: rgba(107, 107, 107, 0.603); }
+        .contact-us-contact__container__row__column__form__row__column input:-ms-input-placeholder {
+          font-style: italic;
+          font-size: 13px;
+          color: rgba(107, 107, 107, 0.603); }
+        .contact-us-contact__container__row__column__form__row__column input::placeholder {
+          font-style: italic;
+          font-size: 13px;
+          color: rgba(107, 107, 107, 0.603); }
+      .contact-us-contact__container__row__column__form__row__column__text {
+        margin-bottom: 30px;
+        width: 100%;
+        border: none;
+        background-color: #f3f6f5; }
+        .contact-us-contact__container__row__column__form__row__column__text__txt-area {
+          height: 150px;
+          width: 100%;
+          border: none;
+          padding: 10px 10px 13px 10px;
+          background-color: transparent;
+          outline: none; }
+          .contact-us-contact__container__row__column__form__row__column__text__txt-area::-webkit-input-placeholder {
+            font-style: italic;
+            font-size: 13px;
+            color: rgba(107, 107, 107, 0.603); }
+          .contact-us-contact__container__row__column__form__row__column__text__txt-area:-ms-input-placeholder {
+            font-style: italic;
+            font-size: 13px;
+            color: rgba(107, 107, 107, 0.603); }
+          .contact-us-contact__container__row__column__form__row__column__text__txt-area::placeholder {
+            font-style: italic;
+            font-size: 13px;
+            color: rgba(107, 107, 107, 0.603); }
+      .contact-us-contact__container__row__column__form__row__column__button__btn {
+        margin-bottom: 30px;
+        padding: 12px 25px;
+        color: #e3a51e;
+        font-size: 16px;
+        background-color: #333333;
+        transition: all 0.3s linear; }
+        .contact-us-contact__container__row__column__form__row__column__button__btn:hover {
+          color: white;
+          background-color: #e3a51e; }
+      .contact-us-contact__container__row__description h2 {
+        text-transform: capitalize;
+        padding-bottom: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        color: #333333;
+        font-weight: 600; }
+      .contact-us-contact__container__row__description__info__article {
+        padding-bottom: 30px; }
+      .contact-us-contact__container__row__description__info__list__item {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 15px; }
+      .contact-us-contact__container__row__description__info__date h3 {
+        padding-bottom: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #333333;
+        font-weight: 600; }
+      .contact-us-contact__container__row__description__info__date__day {
+        color: #333333;
+        margin-right: 10px; }
+      .contact-us-contact__container__row__description__info__date span {
+        margin-top: -8px; }

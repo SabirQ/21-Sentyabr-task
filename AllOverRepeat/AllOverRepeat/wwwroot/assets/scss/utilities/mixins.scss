@@ -1,0 +1,124 @@
+
+@mixin containerResponse{
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 540px;
+    @media (min-width: 576px)
+    {
+        min-width: 540px;
+    }
+    @media (max-width: 575px)
+    {
+      padding: 0 15px;
+    }
+    @media (min-width: 768px)
+     {
+        min-width: 720px;
+    }
+    @media (min-width: 992px)
+     {
+        min-width: 960px;
+        padding: 0;
+    }
+    @media (min-width: 1200px)
+     {
+        max-width: 1200px;
+    }
+}
+@mixin columnPadding{
+    @media (max-width:991px){
+        padding-left: 0 !important;
+        padding-right:0 !important;
+    }
+}
+@mixin container{
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 0;
+    @media (min-width: 576px)
+    {
+       
+        min-width: 540px;
+    }
+    @media (max-width: 575px)
+    {
+
+    }
+    @media (min-width: 768px)
+     {
+        min-width: 720px;
+    }
+    @media (min-width: 992px)
+     {
+        padding: 0 12px;
+        min-width: 960px;
+        
+    }
+    @media (min-width: 1200px)
+     {
+        max-width: 1200px;
+    }
+}
+@mixin pagesPadding{
+    padding: 62px 0 62px 0;
+    @media (min-width:768px){
+      padding: 80px 0 80px 0;
+    }
+}
+@mixin italicPlaceholder{
+    &::-webkit-input-placeholder {
+        font-style: italic;
+        font-size: 13px;
+        color: rgba(107, 107, 107, 0.603);
+       }
+         
+       &:-ms-input-placeholder {
+        font-style: italic;
+        font-size: 13px;
+        color: rgba(107, 107, 107, 0.603);
+       }
+         
+       &::placeholder {
+        font-style: italic;
+        font-size: 13px;
+        color: rgba(107, 107, 107, 0.603);
+       }
+}
+@mixin rowResponse{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+@mixin noneBtn{
+ .owl-dots{
+    display: none;
+    }
+    .owl-nav{
+    display: none !important;
+    }
+}
+@mixin Monserrat($color: #666666, $size: 16px){
+ font-family: 'Montserrat', sans-serif;
+ font-size: $size;
+ color: $color;
+}
+
+@mixin centerXY{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin transition ($time : 0.3s){
+    transition: all $time linear;
+}
+
+@mixin hidden{
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s linear;
+}
+@mixin visible{
+opacity: 1;
+visibility: visible;
+transition: all 0.3s linear;
+}

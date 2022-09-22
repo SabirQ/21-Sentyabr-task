@@ -1,0 +1,228 @@
+@import "../utilities/colors.scss";
+@import "../utilities/mixins.scss";
+
+.table {
+  
+}
+
+
+.cart{
+  @include pagesPadding;
+  &__container{
+    @include container;
+    &__row{
+      @include rowResponse;
+      &__column{
+        padding: 0;
+        &__cus-table{
+          width: 100%;
+          margin: 0;
+          white-space: nowrap;
+          &__table{
+            width: 100%;
+            border-collapse: collapse !important;
+            background-color: transparent;
+            border: 0 !important;
+            margin: 0;
+            &__head{
+              background-color: $main;
+              &__row{
+                &__title{
+                  text-align: center;
+                  border-color: $main;
+                  color: white;
+                  font-size: 14px;
+                  font-weight: 600;
+                  padding: 15px 20px;
+                  text-align: center;
+                  text-transform: uppercase;
+                  border-bottom: 0 solid transparent;
+                }
+              }
+            }
+            &__body{
+              &__row{
+                td{
+                  margin: 0;
+                  text-align: center !important;
+                  border: 1px solid;
+                  border-color: #ccc;
+                  text-align: center;
+                  padding: 10px 20px;
+                  vertical-align: middle;
+                  color: $listTitleColor;
+                }
+                &__link{
+                   width: 140px;
+                  &__image{
+                    max-width: 100%;
+                    &__img{
+                      max-width: 100%;
+                      height: auto;
+                      object-fit: contain;
+                    }
+                  }
+                }
+                &__title{
+                  &__link{
+                    color:$listTitleColor;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    @include transition(0.3s);
+                    &__name{
+  
+                    }
+                  }
+                }
+                &__price{
+                  &__value{
+  
+                  }
+                }
+                &__count{
+                  margin: 0 auto;
+                  
+                  .plus-minus{
+                    display: inline-block !important;
+                  }
+                }
+                &__sub-total{
+                  &__value{
+  
+                  }
+                }
+                &__delete{
+                  &__btn{
+                    @include transition(0.3s);
+                    background-color: transparent;
+                    color: $listTitleColor;
+                    font-size: 14px;
+                    &:hover{
+                      color: $main;
+                    }
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+        &__coupon{
+          display: flex;
+          border: 1px solid #ccc;
+          margin-top: 15px;
+          padding: 15px 20px;
+          justify-content: space-between;
+          @media (min-width: 992px)
+          {padding: 15px 20px;
+            margin-top: 0;
+            border-top: 0 solid transparent;
+          }
+          @media (max-width: 767px)
+              {
+               flex-direction: column;
+              }
+          &__form{
+            min-width: 55%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            @media (max-width: 767px)
+              {
+               flex-direction: column;
+              }
+            &__input{
+              flex: 1;
+              display: inline-block;
+              padding: 12px 10px;
+              margin-right: 15px;
+              border: 1px solid #ccc;
+              @media (max-width: 767px)
+              {
+                width: 100%;
+                display: block;
+                margin-right: 0;
+                margin-bottom: 15px;
+              }
+
+
+
+            }
+            .custom-button{
+              @media (max-width: 767px)
+              {
+                width: 100%;
+                display: block;
+                margin-bottom: 15px;
+              }
+            }
+          }
+          &__button{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            .custom-button{
+              @media (max-width: 767px)
+              {
+                width: 100%;
+                display: block;
+                
+              }
+            }
+
+          }
+        }
+       
+      }
+    }
+    &__row-payment{
+      &__column{
+        margin-left: auto;
+        @media (max-width: 991px)
+        {
+          width: 100%;
+        }
+        .custom-button{
+          width: 100%;
+        }
+        &__payment{
+          margin-top: 30px;
+          background-color: #f8f8f8;
+          font-weight: 500;
+          &__title{
+            font-weight: 500;
+            padding: 27px 15px 25px;
+            margin-bottom: 0;
+            @include Monserrat ($listTitleColor,18px);
+          }
+          &__info{
+            &__item{
+              border-top: 1px solid #dee2e6;
+              display: flex;
+              justify-content: space-between;
+              font-size: 16px;
+              color: $listTitleColor;
+              font-weight: 500;
+              span{
+                padding: 15px 20px;
+              }
+              &__static{
+
+              }
+              &__sub-total{
+
+              }
+              &__shipping{
+
+              }
+              &__total{
+                color: $main;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

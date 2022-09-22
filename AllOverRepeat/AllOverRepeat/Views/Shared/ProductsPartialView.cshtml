@@ -1,0 +1,83 @@
+﻿
+@model HomeVM
+
+<section id="main-products" class="main-products">
+    <div class="container main-products__container">
+        <div class="row main-products__container__row">
+            <div class="main-products__container__row__title">
+                <h2>
+                    Our Products
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                </p>
+            </div>
+            <div class=" owl-carousel owl-theme main-products__container__row__carousel">
+                @foreach (var item in Model.Products)
+                {
+                        <div class="item">
+                            <div class="product-prototype ">
+                                <a  class="product-prototype__image">
+                                    <img src="~/assets/images/products/product-1.webp" alt="product"
+                                 class="product-prototype__image__img _img-pro">
+                                </a>
+                                <div class="product-prototype__info">
+                                @foreach (var prop in item.GetType().GetProperties())
+                                {
+                                    if (prop.Name.ToLower()=="brand")
+                                    {
+                                    <h5 class="product-prototype__info__name">
+                                     <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        @prop.GetValue(item)
+                                     </a>
+                                     </h5>
+                                    }
+                                     else if (prop.Name.ToLower()=="model")
+                                    {
+                                    <h5 class="product-prototype__info__name">
+                                     <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        @prop.GetValue(item)
+                                     </a>
+                                     </h5>
+                                    }
+                                     else if (prop.Name.ToLower()=="categoryid")
+                                    {
+                                    <h5 class="product-prototype__info__name">
+                                     <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        @Model.Categories.FirstOrDefault(x=>x.Id==(int)prop.GetValue(item))?.Name
+                                    </a>
+                                     </h5>
+                                    }
+                                      else if (prop.Name.ToLower()=="price")
+                                    {
+                                    <span class="product-prototype__info__actual-price _price-pro">
+                                        $<span>@prop.GetValue(item)</span>
+                                    </span>
+                                    }
+                                }
+                                </div>
+                                <div class="product-prototype__buttons">
+                                    <button type="button" class="product-prototype__buttons__btn-wishlist "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="product-prototype__buttons__btn-chart _btn-pro" id="pro1"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                        <i class="fa-solid fa-bag-shopping"></i>
+                                    </button>
+                                    <button type="button" class="product-prototype__buttons__btn-view _quick-btn "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Quick View">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

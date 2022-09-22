@@ -1,0 +1,419 @@
+@import "../utilities/colors.scss";
+@import "../utilities/mixins.scss";
+
+
+
+.single-blog{
+    @include pagesPadding;
+    &__container{
+        @include container;
+        &__row{
+            @include rowResponse;
+            &__column-blog{
+                &__blog{
+                    &__image{
+                        width: 100%;
+                        position: relative;
+                        &__img{
+                            max-width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &__info{
+                        padding-top: 20px;
+                        &__title{
+                            @include Monserrat($listTitleColor,24px);
+                            padding-bottom: 10px;
+                            font-weight: 600;
+                        }
+                        &__bold{
+                            font-weight: 600;
+                            font-size: 14px;
+                            color: $listTitleColor;
+                        }
+                        &__light{
+                            font-size: 14px;
+                        }
+                        &__article{
+                            padding-top: 20px;
+                        }
+                        &__note{
+                            margin: 25px 32px 25px 30px;
+                            border-left: 5px solid $main;
+                            background-color: #f8f8f8;
+                            padding: 15px;
+                            &__article{
+                                margin: 0;
+
+                            }
+                        }
+                    }
+                    &__comment-area{
+                        @include pagesPadding;
+                        &__title{
+                            padding-bottom: 20px;
+                            @include Monserrat($listTitleColor,20px);
+                            font-weight: 600;
+                        }
+                        &__comment{
+                            margin-bottom: 30px;
+                            padding: 10px 20px;
+                            border: 1px solid $bottomBorder;
+                            display: flex;
+                            &:nth-child(3){
+                                margin-left: 40px;
+                            }
+                            @media (max-width:479px){
+                                flex-wrap: wrap;
+                            }
+                            &__image{
+                                max-width: 100%;
+                                
+                                &__img{
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                            }
+                            &__text{
+                                position: relative;
+                                margin-top: 0;
+                                margin-left: 22px;
+                                @media (max-width:479px){
+                                    margin-top: 20px;
+                                    margin-left: 0px;
+                                }
+                                &__btn{
+                                    border: 1px solid $bottomBorder;
+                                    background-color: white;
+                                    @include transition(0.3s);
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    font-size: 12px;
+                                    width: 62px;
+                                    height: 30px;
+                                    border-radius: 20px;
+                                    &:hover{
+                                        background-color: $main;
+                                        color: white;
+                                        border-color: $main;
+                                    }
+                                }
+                                &__title{
+                                    color: $listTitleColor;
+                                    padding-bottom: 5px;
+                                    font-size: 14px;
+                                    margin: 0;
+                                }
+                                &__date{
+                                    font-size: 13px;
+                                    padding-bottom: 10px;
+                                }
+                                &__article{
+                                    margin: 0;
+                                    padding-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                    &__reply{
+
+                        &__title{
+                            @include Monserrat($listTitleColor,20px);
+                            margin: 0;
+                            font-weight: 600;
+                        }
+                        &__article{
+                            padding-top: 10px;
+                            margin-bottom: 10px;
+                        }
+                        &__form{
+                            &__row{
+                                &__column{
+                                    &__input{
+                                        background: #f8f8f8;
+                                        border: none;
+                                        color: #666666;
+                                        padding: 8px 10px;
+                                        margin-bottom: 20px;
+                                        width: 100%;
+                                        @include italicPlaceholder;
+                                    }
+                                    &__text-area{
+                                        @include italicPlaceholder;
+                                        height: 130px;
+                                        background: #f8f8f8;
+                                        border: none;
+                                        color: #666666;
+                                        width: 100%;
+                                        padding: 10px 10px;
+                                        margin-bottom: 20px;
+
+                                    }
+                                    label{
+                                        margin-bottom: 10px;
+                                        display: block;
+                                        color: $listTitleColor;
+                                        font-weight: 500;
+                                    }
+                                    &__button{
+                                        .custom-button{
+                                            margin-top: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            &__column{
+               padding-top: 62px;
+                @media (min-width:768px){
+                    padding-top: 80px;
+                }
+                @media (min-width:992px){
+                    padding-top: 0;
+                }
+
+                &__user{
+                    &__image{
+                        min-width: 100%;
+                        &__img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &__info{
+                        text-align: center;
+                        padding: 20px;
+                        border: 1px solid $borderColor;
+                        &__title{
+                            @include Monserrat($listTitleColor,18px);
+                            font-weight: 500;
+                            margin: 0;
+                        }
+                        &__profession{
+                            padding: 8px 0;
+                            font-size: 14px;
+                            margin: 0;
+                        }
+                        &__social{
+                            &__link{
+                                margin-right: 15px;
+                            }
+                        }
+
+                    }
+                }
+                &__search{
+                    margin-bottom: 35px;
+                    &__title{
+                        @include Monserrat($listTitleColor,20px);
+                        font-weight: 500;
+                        margin-bottom: 40px;
+                        position: relative;
+                        &::before {
+                            bottom: -10px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            background-color: #e5e5e5;
+                        }
+                        &::after {
+                            bottom: -10px;
+                            left: 0;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            width: 50px;
+                            background-color: #333333;
+                        }
+                    }
+                    &__item{
+                        width: 100%;
+                        position: relative;
+                        padding: 0 55px 0 15px;
+                        background-color: #f6f6f6;
+                        height: 46px;
+                        &__input{
+                            outline: none;
+                            border: none;
+                            @include italicPlaceholder;
+                            width: 100%;
+                            height: 100%;
+                            background-color: transparent;
+                        }
+                        &__button{
+                            width: 46px;
+                            height: 46px;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            color: white;
+                            background-color: $main;
+                            @include transition(0.3s);
+                            &:hover{
+                                background-color: $listTitleColor;
+                            }
+                        }
+                    }
+                }
+                &__posts{
+                    &__title{
+                        @include Monserrat($listTitleColor,20px);
+                        font-weight: 500;
+                        margin-bottom: 40px;
+                        position: relative;
+                        &::before {
+                            bottom: -10px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            background-color: #e5e5e5;
+                        }
+                        &::after {
+                            bottom: -10px;
+                            left: 0;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            width: 50px;
+                            background-color: #333333;
+                        }
+                    }
+                    &__list{
+                        &__item{
+                            margin-bottom: 30px;
+                          display: flex;
+                            &__image{
+                                
+                                max-width: 80px;
+                                max-height: 67px;
+                                &__img{
+                                    max-width: 80px;
+                                    max-height: 67px;
+                                }
+                            }
+                            &__info{
+                                padding-left: 10px;
+                                &__date{
+                                    display: block;
+                                    font-size: 14px;
+                                    line-height: 1;
+                                    padding-bottom: 10px;
+                                }
+                                &__link{
+                                    line-height: 1.2;
+                                    display: block;
+                                    font-weight: 500;
+                                    @include Monserrat($listTitleColor, 16px);
+                                    @include transition(0.3s);
+                                }
+
+                            }
+                        }
+                    }
+
+
+                }
+                &__category{
+                    &__title{
+                        @include Monserrat($listTitleColor,20px);
+                        font-weight: 500;
+                        margin-bottom: 40px;
+                        position: relative;
+                        &::before {
+                            bottom: -10px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            background-color: #e5e5e5;
+                        }
+                        &::after {
+                            bottom: -10px;
+                            left: 0;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            width: 50px;
+                            background-color: #333333;
+                        }
+                    }
+                    &__list{
+                        &__item{
+                            margin-bottom: 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            @include transition(0.3s); 
+                            &:hover{
+                                color: $main;
+                                a{
+                                    color: $main;
+                                    cursor: pointer;
+                                }                            
+                            }
+                            &__link{
+                                color: $listTitleColor;
+                                @include transition(0.3s);
+                            }
+                        }
+                        &__type{
+
+                        }
+                    }
+                }
+                &__tags{
+                    &__title{
+                        @include Monserrat($listTitleColor,20px);
+                        font-weight: 500;
+                        margin-top: 25px;
+                        margin-bottom: 40px;
+                        position: relative;
+                        &::before {
+                            bottom: -10px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            background-color: #e5e5e5;
+                        }
+                        &::after {
+                            bottom: -10px;
+                            left: 0;
+                            height: 1px;
+                            content: "";
+                            position: absolute;
+                            width: 50px;
+                            background-color: #333333;
+                        }
+                    }
+                    &__links{
+                        &__link{
+                            padding: 4px 15px;
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                            display: inline-block;
+                            color: $listTitleColor;
+                            border:1px solid $bottomBorder;
+                            @include transition(0.3s);
+                            &:hover{
+                                background-color: $main;
+                                color: white;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

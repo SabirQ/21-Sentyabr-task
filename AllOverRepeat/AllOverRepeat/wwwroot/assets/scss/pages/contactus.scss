@@ -1,0 +1,148 @@
+@import "../utilities/colors.scss";
+@import "../utilities/mixins.scss";
+
+.page-titles{
+    background-color: $banner;
+    &__container{
+        @include container;
+        &__row{
+            width: 100%;
+            @include rowResponse;
+            &__column{
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                padding-top:28px ;
+                padding-bottom: 35px;
+                text-align: center;
+                @media (min-width:768px){
+                    padding-top:52px ;
+                padding-bottom: 57px;
+                }
+                h1{
+                padding-bottom: 1px;
+                text-transform: uppercase;
+                @include Monserrat( $listTitleColor,24px);
+                font-weight:600;
+                }
+                &__link{
+                    padding: 0 2px;
+                    font-size: 16px;
+                    color: $listTitleColor;
+                }
+                span{
+                    color:$main ;
+                    padding: 0 2px;
+                }
+                &__slash{
+                    font-size: 16px;
+                    color: $listTitleColor !important;
+                }
+            }
+        }
+    }
+}    
+
+
+
+
+
+.contact-us-contact{
+    @include pagesPadding;
+    &__container{
+        @include container;
+        &__row{
+            @include rowResponse;
+            &__column{
+                &__title{
+                 text-transform: capitalize;
+                 padding-bottom: 30px;
+                 @include Monserrat($listTitleColor,24px);
+                 font-weight: 600;
+                }
+                &__form{
+                    &__row{
+                        &__column{
+                            input{
+                                margin-bottom: 30px;
+                                width: 100%;
+                                border: none;
+                                padding: 10px 10px 13px 10px;
+                                background-color:$contactInput;
+                                @include italicPlaceholder;
+                                outline: none;
+                            }
+
+                            &__text{
+                                margin-bottom: 30px;
+                                width: 100%;
+                                border: none;
+                                background-color:$contactInput;
+                                
+                                &__txt-area{
+                                    height: 150px;
+                                    width: 100%;
+                                    border: none;
+                                    padding: 10px 10px 13px 10px;
+                                    background-color: transparent;
+                                    outline: none;
+                                    @include italicPlaceholder;
+                                }
+                            }
+                            &__button{
+                                &__btn{
+                                    margin-bottom: 30px;
+                                    padding: 12px 25px;
+                                    color: $main;
+                                    font-size: 16px;
+                                    background-color: $listTitleColor;
+                                    @include transition;
+                                    &:hover{
+                                        color: white;
+                                        background-color: $main;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__description{
+                h2{
+                    text-transform: capitalize;
+                    padding-bottom: 30px;
+                    @include Monserrat($listTitleColor,24px);
+                    font-weight: 600;
+                }
+                &__info{
+                    &__article{
+                        padding-bottom: 30px;
+                    }
+                    &__list{               
+                        &__item{
+                         padding-bottom: 15px;
+                         border-bottom: 1px solid $bottomBorder;
+                         margin-bottom: 15px;
+                        }
+                    }
+                    &__date{
+                        h3{
+                         padding-bottom: 5px;
+                         @include Monserrat($listTitleColor,16px);
+                         font-weight: 600;
+                        }
+                        &__day{
+                            color: $listTitleColor ;
+                            margin-right: 10px;
+                        }
+                        span{
+                            margin-top: -8px;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
