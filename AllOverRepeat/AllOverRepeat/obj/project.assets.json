@@ -9442,11 +9442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (8)\\ClassWorksPYP\\repos\\AllOverRepeat\\AllOverRepeat\\AllOverRepeat.csproj",
+      "projectUniqueName": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (12)\\AllOverRepeat\\AllOverRepeat\\AllOverRepeat.csproj",
       "projectName": "AllOverRepeat",
-      "projectPath": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (8)\\ClassWorksPYP\\repos\\AllOverRepeat\\AllOverRepeat\\AllOverRepeat.csproj",
+      "projectPath": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (12)\\AllOverRepeat\\AllOverRepeat\\AllOverRepeat.csproj",
       "packagesPath": "C:\\Users\\sabir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (8)\\ClassWorksPYP\\repos\\AllOverRepeat\\AllOverRepeat\\obj\\",
+      "outputPath": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (12)\\AllOverRepeat\\AllOverRepeat\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

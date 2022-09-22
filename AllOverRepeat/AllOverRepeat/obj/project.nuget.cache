@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F5CQOk6uO/Ai2FDjaO3r6wZLN6cV5cshA11Sj8kNGMT1Ov9hWId/aHlkCu3LErziGmm0dzOp8ZvkGppXoYfcbA==",
+  "dgSpecHash": "NnNWhKtg21eB3L1pfHZ3ugLPUscMoaVeWRHDf9Hj0WsMKmKv/8vRiEH2JLb7ObOgqtVP0o3SunFnYdn9mbdKPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (8)\\ClassWorksPYP\\repos\\AllOverRepeat\\AllOverRepeat\\AllOverRepeat.csproj",
+  "projectFilePath": "C:\\Users\\sabir\\OneDrive\\Рабочий стол\\Новая папка (12)\\AllOverRepeat\\AllOverRepeat\\AllOverRepeat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sabir\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\sabir\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -24,23 +24,8 @@
                                 <div class="product-prototype__info">
                                 @foreach (var prop in item.GetType().GetProperties())
                                 {
-                                    if (prop.Name.ToLower()=="brand")
-                                    {
-                                    <h5 class="product-prototype__info__name">
-                                     <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
-                                        @prop.GetValue(item)
-                                     </a>
-                                     </h5>
-                                    }
-                                     else if (prop.Name.ToLower()=="model")
-                                    {
-                                    <h5 class="product-prototype__info__name">
-                                     <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
-                                        @prop.GetValue(item)
-                                     </a>
-                                     </h5>
-                                    }
-                                     else if (prop.Name.ToLower()=="categoryid")
+                                    
+                                    if (prop.Name.ToLower()=="categoryid")
                                     {
                                     <h5 class="product-prototype__info__name">
                                      <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
@@ -53,6 +38,15 @@
                                     <span class="product-prototype__info__actual-price _price-pro">
                                         $<span>@prop.GetValue(item)</span>
                                     </span>
+                                    }
+                                    //If you need to hide Id you can add Id prop name too
+                                      else if(prop.Name.ToLower()!="createdat"&&prop.Name.ToLower()!="modifiedat")
+                                    {
+                                    <h5 class="product-prototype__info__name">
+                                     <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        @prop.GetValue(item)
+                                     </a>
+                                     </h5>
                                     }
                                 }
                                 </div>
